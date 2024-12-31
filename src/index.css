@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.btn-outline {
+  @apply shadow-xl p-4 text-zinc bg-transparent border border-zinc  font-bold rounded-lg transition duration-300 ease-in-out transform select-none focus:outline-none disabled:bg-orange/15 disabled:text-orange disabled:cursor-not-allowed capitalize;
+
+   /* Active (clicked) effect */
+   &:active {
+    @apply shadow-md;
+    transform: scale(0.90);
+  }
+}
+
+.btn-primary {
+  @apply shadow-xl p-4 text-[#ffffff] bg-orange font-bold rounded-lg transition duration-300 ease-in-out transform select-none focus:outline-none disabled:bg-orange/15 disabled:text-orange disabled:cursor-not-allowed capitalize;
+
+  /* Active (clicked) effect */
+  &:active {
+    @apply shadow-md;
+    transform: scale(0.90);
+  }
+
+
+}
+
+
+
+/* Scrollbar */
+
+body {
+  --sb-track-color: #D1D5DB;
+  --sb-thumb-color: #F55800;
+  --sb-size: 8px; /* Scrollbar width */
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color); /* Track color (Gray-300) */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color); /* Thumb color (Slate-700) */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid transparent; /* Padding for thumb visibility */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #cf5813; 
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    scrollbar-width: thin;
+  }
+}
+
+
+
+
+/* Animations */
+
+@keyframes subtleBounce {
+  0%, 100% {
+      transform: translateY(-10%);
+      animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+  50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-subtle-bounce {
+  animation: subtleBounce 1s ease-in-out 10;
+}
+

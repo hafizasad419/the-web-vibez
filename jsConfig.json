@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".", // Tells VSCode the root directory for your project
+        "paths": {
+            "@src/*": [
+                "src/*"
+            ], // Alias for the 'src' directory
+            "@/*": [
+                "*"
+            ] // Alias for the root directory
+        }
+    },
+    "include": [
+        "src/**/*" // This tells VSCode to include files in the src directory
+    ]
+}
