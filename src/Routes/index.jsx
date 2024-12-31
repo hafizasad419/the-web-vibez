@@ -3,8 +3,7 @@ import NormalRoutes from "./NormalRoutes"
 import AuthRoutes from "./AuthRoutes"
 import Header from '@src/Components/Header';
 import { useSelector } from 'react-redux';
-
-const Fallback = lazy(() => import('@src/Components/Fallback'));
+import Fallback from '@src/Components/Fallback';
 
 const BaseRoutes = () => {
   const user = useSelector(state => state.user); //check if user  exists 

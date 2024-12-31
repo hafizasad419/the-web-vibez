@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
   ],
@@ -14,7 +15,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, '.'), // Alias for root directory
     },
   },
-  server: {
-    historyApiFallback: true,
+  build: {
+    rollupOptions: {
+      input: './index.html',
+    },
   },
 })
