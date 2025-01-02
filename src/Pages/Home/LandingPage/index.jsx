@@ -9,16 +9,19 @@ import HighlightedHeading from '@src/Components/HighlightedHeading';
 function LandingPage() {
     return (
         <div>
-
-
-
+                                              
             <h1
                 className='text-5xl lg:text-6xl text-left text-gray-600 py-10 lg:py-6'>
-                We <br className='lg:hidden' /> <span className='text-zinc font-bold'>Design</span> and <span className='text-zinc font-bold'>Develop</span> Websites That Convert <span> Visitors</span> into <HighlightedHeading>Customers</HighlightedHeading>
+                We <br className='lg:hidden' /> <span className=''>Build</span><span className=''> Websites</span> That Convert <span> Visitors</span> into <HighlightedHeading> <span className='text-zinc font-bold'>Clients</span></HighlightedHeading>
             </h1>
 
+            {/* <div
+            className='hidden lg:block w-44 absolute lg:left-[480px] lg:top-[190px]'
+            >
+            <RightArrow />
+            </div> */}
             <section
-                className='lg:py-6 text-gray-600 flex flex-col lg:flex-row lg:justify-between'
+                className='lg:py-12 text-gray-600 flex flex-col lg:flex-row lg:justify-between'
             >
 
                 {/* Left Side */}
