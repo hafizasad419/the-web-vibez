@@ -11,11 +11,11 @@ const BaseRoutes = () => {
   return (
     <>
       <div className='bg-white min-h-screen'>
-        <div className='px-4 lg:px-8'>
+        <div>
           <Header />
         </div>
 
-        <div className='px-4 lg:px-28'>
+        <div className='px-4 lg:px-28 bg-green-5 mt-20 lg:mt-24 lg:py-12'>
           <Suspense fallback={<Fallback />}>
             {
               user ?

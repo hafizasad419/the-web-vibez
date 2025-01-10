@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <header
-      className='py-4 lg:py-6 flex items-center justify-between lg:justify-around'
+      className='py-4 lg:py-6 flex items-center justify-between lg:justify-around fixed w-full bg-white z-[100] top-0 shadow px-4 lg:px-0'
     >
 
       <NavLink to={"/"}>

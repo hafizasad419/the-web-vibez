@@ -11,7 +11,7 @@ function Testimonials() {
 
 
   return (
-    <div className="border-dashed border-t border-gray-400 mt-8 py-8 lg:py-16">
+    <div className="border-dashed border-y border-gray-400 mt-8 py-8 lg:py-16">
       <h4 className="text-4xl lg:text-5xl text-center font-extrabold text-gray-600 lg:mb-0 mb-8">
         {/* Responsive Highlighted Heading */}
         <HighlightedHeading className="lg:hidden">Join the Growing</HighlightedHeading>
@@ -54,7 +54,7 @@ function Testimonials() {
       </section>
 
       <div
-        className='flex justify-center py-8'
+        className='flex justify-center pt-0 lg:pt-12 pb-6 lg:pb-0'
       >
         <button
           className='btn-primary !px-16'

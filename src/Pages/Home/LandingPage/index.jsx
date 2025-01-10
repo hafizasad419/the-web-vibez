@@ -4,24 +4,27 @@ import { BadgeCheck, CircleCheck, MoveRight, Star } from 'lucide-react'
 import { clientImages } from './clientImages';
 import { businessesLogos } from './businessesLogos';
 import HighlightedHeading from '@src/Components/HighlightedHeading';
+import { ThreePointCrown } from './Icons';
 
 
 function LandingPage() {
     return (
         <div>
-                                              
-            <h1
-                className='text-5xl lg:text-6xl text-left text-gray-600 py-10 lg:py-6'>
-                We <br className='lg:hidden' /> <span className=''>Build</span><span className=''> Websites</span> That Convert <span> Visitors</span> into <HighlightedHeading> <span className='text-zinc font-bold'>Clients</span></HighlightedHeading>
-            </h1>
 
-            {/* <div
-            className='hidden lg:block w-44 absolute lg:left-[480px] lg:top-[190px]'
+            <div
+            className='py-16 lg:py-6 relative'
             >
-            <RightArrow />
-            </div> */}
+
+            <span className='absolute top-8 lg:-top-2 -left-1 lg:left-0'><ThreePointCrown /></span>
+                <h1
+                    className='text-5xl lg:text-6xl text-left text-gray-600 font-bold'>
+                    High Quality Custom <br className='lg:hidden' /> <span className=''>Websites for your business</span><span className=''> to</span> help you <span> get</span> more <HighlightedHeading> <span className=''>Customers</span></HighlightedHeading>
+                </h1>
+            </div>
+
+
             <section
-                className='lg:py-12 text-gray-600 flex flex-col lg:flex-row lg:justify-between'
+                className='lg:py-12 text-gray-600 flex flex-col lg:flex-row lg:justify-between items-center'
             >
 
                 {/* Left Side */}
@@ -113,10 +116,23 @@ function LandingPage() {
 
                 {/* Right Side */}
                 <div
-                    className=' bg-gray-400 w-full lg:w-[60%] mt-20 lg:mt-0 rounded flex justify-center items-center'
+                    className='bg-gray- w-full lg:w-[60%] mt-20 lg:mt-0 rounded flex justify-center items-center'
                 >
-                    Video Here
+
+
+                    <img
+                        className='rounded-xl'
+                        src="https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="" />
+                    {/* 
+                    <img
+                        className='rounded-xl'
+                        src="/brock-lesnar.png"
+                        alt="" /> */}
+
+                    {/* Video Here */}
                 </div>
+
             </section>
 
             {/* Businesses We Worked With */}

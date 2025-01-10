@@ -5,7 +5,7 @@ function TestimonialsOptions({ testimonial, selectedOption, setSelectedOption })
 
 
         <div
-            className={`hidden text-gray-600 py-10 lg:flex flex-col justify-center items-center 
+            className={`hidden rounded-xl text-gray-600 py-10 lg:flex flex-col justify-center items-center 
                 cursor-pointer border border-gray-300
                 ${testimonial?.id === selectedOption ? "bg-gray-200" : ""}`}
             onClick={() => setSelectedOption(testimonial?.id)}

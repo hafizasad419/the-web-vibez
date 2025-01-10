@@ -21,8 +21,8 @@ function MobileNavItems() {
       </button>
 
       <div
-        className={`absolute top-full -right-4 py-4 mt-2 w-svw bg-white rounded-md overflow-hidden transition-all duration-300 ease-in-out
-           ${isOpen ? 'max-h-96 opacity-100 border-b border-gray-300' : 'max-h-0 opacity-0'}`
+        className={`z-[10] absolute top-full -right-4 py-4 mt-2 w-svw bg-white rounded-md overflow-hidden transition-all duration-300 ease-in-out
+           ${isOpen ? 'h-svh opacity-100 border-b border-gray-300' : 'max-h-0 opacity-0'}`
         }
       >
         <ul className='py-2'>
