@@ -1,0 +1,1 @@
+export const ourProcess = ["Discovery & Strategy", "Design & Development", "Testing & Refinement", "Launch & Growth"]

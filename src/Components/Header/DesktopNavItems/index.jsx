@@ -12,11 +12,11 @@ function DekstopNavItems() {
                     key={i}
                     className='navItem mx-4'>
                         <NavLink to={navItem.route} className={({ isActive }) => (
-                            `block px-4 my-1 py-3 font-bold text-lg text-zinc ${isActive ? "" : ""}`)}>
+                            `block px-4 my-1 py-3 font-bold text-lg text-gray-700 ${isActive ? "" : ""}`)}>
                             {({ isActive }) => (
                                 <section>
                                     {isActive && <span className="mr-2">
-                                        <Gem className='inline' />
+                                        <Gem className='inline w-4 h-4' />
                                     </span>}
                                     {navItem.title}
                                 </section>

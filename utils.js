@@ -1,17 +1,4 @@
-import * as yup from "yup";
-import { WEB_VIBEZ_ACCESS } from "./constants";
-// import { Store } from "react-notifications-component";
-
-
-export const selectStyles = (hasError) => ({
-    // Define your styles here
-    control: (provided) => ({
-        ...provided,
-        borderColor: hasError ? 'red' : provided.borderColor,
-    }),
-    
-});
-
+import { PHONE_NUMBER, WEB_VIBEZ_ACCESS, WHATSAPP_URL } from "./constants";
 
 
 export const getToken = () => {
@@ -42,70 +29,18 @@ export const removeToken = () => {
     localStorage.removeItem(WEB_VIBEZ_ACCESS);
 }
 
-{/*
-export const success_alert = (message, title) => {
-    let new_msg = "";
-    if ((message[0] === '"' || message[0] === "'") && (message[message.length - 1] === '"' || message[message.length - 1] === "'")) {
-        new_msg = message.substr(1, message.length - 2);
-    } else {
-        new_msg = message
-    }
-    Store.addNotification({
-        title: title ? title : "",
-        message: new_msg,
-        className: "noti",
-        type: "success",
-        insert: "bottom",
-        container: "bottom-right",
-        animationIn: ["animate__animated", "animate__fadeInUp"],
-        animationOut: ["animate__animated", "animate__fadeOut"],
-        dismiss: {
-            duration: 7000,
-            onScreen: true,
-            showIcon: true
-        }
-    })
-}
 
-export const error_alert = (message, title) => {
-    let new_msg = "";
-    if ((message[0] === '"' || message[0] === "'") && (message[message.length - 1] === '"' || message[message.length - 1] === "'")) {
-        new_msg = message.substr(1, message.length - 2);
-    } else {
-        new_msg = message
-    }
-    Store.addNotification({
-        title: title ? title : "",
-        message: new_msg,
-        className: "noti",
-        type: "danger",
-        insert: "bottom",
-        container: "bottom-right",
-        animationIn: ["animate__animated", "animate__slideInRight"],
-        animationOut: ["animate__animated", "animate__slideOutBottom"],
-        dismiss: {
-            duration: 7000,
-            onScreen: true,
-            showIcon: true
-        }
-    })
-}
+export const calculateDiscountInPercentage = (originalPrice, discountedPrice) => {
+    return (((originalPrice - discountedPrice) / originalPrice) * 100).toFixed();
+};
 
-export const warning_alert = (message, title) => {
-    Store.addNotification({
-        title: title ? title : "",
-        message: message,
-        type: "warning",
-        insert: "bottom",
-        container: "bottom-right",
-        animationIn: ["animate__animated", "animate__fadeIn"],
-        animationOut: ["animate__animated", "animate__fadeOut"],
-        dismiss: {
-            duration: 7000,
-            onScreen: true,
-            showIcon: true
-        }
-    })
-}
+export const sendMailTo = ({ emailAddress, subject = "Hello", body = "I would like to connect with you." }) => {
+    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+};
 
-*/}
+
+export const sendWhatsappMessage = ({ message = "I am intersted in your services, Please tell me more." }) => {
+    window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`)
+};
+

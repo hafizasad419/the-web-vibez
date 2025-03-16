@@ -17,6 +17,7 @@ function AuthRoutes() {
     return (
         <Suspense fallback={<Fallback />}>
             <Routes>
+                <Route path='/temp' element={<Fallback />} />
                 <Route path='/' element={<Home />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/signup' element={<Signup />} />
@@ -25,7 +26,7 @@ function AuthRoutes() {
                 <Route path='/docs' element={<Docs />} />
                 <Route path='/privacy-policy' element={<PrivacyPolicy />} />
                 <Route path='/terms' element={<TermsAndConditions />} />
-                <Route path='/faqs' element={<FAQs />} />
+                <Route path='/frequently-asked-questions' element={<FAQs />} />
 
                 <Route path='*' element={<Navigate to="/" />} />
             </Routes>

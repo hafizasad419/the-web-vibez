@@ -11,8 +11,8 @@ export const guestNavItems = [
     //     title: "Docs",
     //     route: "docs"
     // },
-    // {
-    //     title: "Frequently Asked Questions",
-    //     route: "faqs"
-    // },
+    {
+        title: "Frequently Asked Questions",
+        route: "frequently-asked-questions",
+    },
 ]

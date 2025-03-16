@@ -1,6 +1,6 @@
 import { BadgeCheck } from 'lucide-react'
 import Quotes from "./Quotes.jsx"
-import { testimonials } from '../testimonials.js'
+import { testimonials } from '../testimonials.js';
 
 function TestimonialsCard({ testimonial, selectedOption, setSelectedOption }) {
     return (

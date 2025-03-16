@@ -1,179 +1,42 @@
-import React from 'react'
-import { uniqueSellingPropositions } from './uniqueSellingPropositions'
-import { BadgeCheck, CircleCheck, MoveRight, Star } from 'lucide-react'
-import { clientImages } from './clientImages';
-import { businessesLogos } from './businessesLogos';
-import HighlightedHeading from '@src/Components/HighlightedHeading';
-import { ThreePointCrown } from './Icons';
+import { MoveRight, Zap, Rocket, Users, Target } from "lucide-react"
+import HighlightedHeading from "@src/Components/HighlightedHeading"
+import { NavLink } from "react-router-dom"
 
 
-function LandingPage() {
+const LandingPage = () => {
     return (
-        <div>
+        <div className="text-gray-700 bg-gray-50">
+            {/* Hero Section */}
+            <section className="py-20 lg:py-28 relative overflow-hidden">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+                            Websites That Work Overtime to Grow <HighlightedHeading>Your Business</HighlightedHeading>
+                        </h1>
+                        <p className="text-xl mb-8">
+                            We build Websites that generate leads even while you sleep.
+                        </p>
 
-            <div
-            className='py-16 lg:py-6 relative'
-            >
-
-            <span className='absolute top-8 lg:-top-2 -left-1 lg:left-0'><ThreePointCrown /></span>
-                <h1
-                    className='text-5xl lg:text-6xl text-left text-gray-600 font-bold'>
-                    High Quality Custom <br className='lg:hidden' /> <span className=''>Websites for your business</span><span className=''> to</span> help you <span> get</span> more <HighlightedHeading> <span className=''>Customers</span></HighlightedHeading>
-                </h1>
-            </div>
-
-
-            <section
-                className='lg:py-12 text-gray-600 flex flex-col lg:flex-row lg:justify-between items-center'
-            >
-
-                {/* Left Side */}
-
-                <div className='space-y-4 lg:space-y-6'>
-                    <h2 className='text-3xl'>What to expect from us?</h2>
-
-                    <ul
-                        className=''
-                    >
-                        {uniqueSellingPropositions.map((item) => (
-                            <li
-                                className='list-none text-base lg:text-lg'
-                                key={item.id}>
-                                <CircleCheck
-                                    className='inline mr-2'
-                                    color='#f5f5f5'
-                                    fill='#F55800'
-                                />
-                                {item.title}
-                            </li>
-                        ))}
-                    </ul>
-                    <div>
-
-                        <button
-                            className='btn-primary'
+                        <NavLink
+                            to={"/pricing"}
                         >
-                            Claim Your Free Website
-                            <MoveRight className='inline w-6 h-6 ml-2' />
-                        </button>
+                            <button className="btn-primary animate-subtle-bounce">
+                                Get Your Business Website for free <MoveRight className="inline w-6 h-6 ml-2" />
+                            </button>
+                        </NavLink>
+
                     </div>
-
-
-                    <section>
-                        {/* Microphone Testing......🎤 */}
-                        <div
-                            className='flex items-center'
-                        >
-
-                            {
-                                [1, 2, 3, 4, 5].map((starValue) => (
-                                    <span
-                                        key={starValue}
-                                    >
-                                        <Star
-                                            className='inline'
-                                            fill='#F55800'
-                                            color='#F55800'
-                                        />
-                                        {/* {starValue === 5 && <span>(14)</span>} */}
-                                    </span>
-
-                                ))
-                            }
-
-                            <span
-                                className='text-gray-600 text-lg font-medium pl-2'
-                            > (141)</span>
-
-
-
-                        </div>
-
-                        <div className='my-4'>
-                            {clientImages.map((image) => (
-                                <img
-                                    key={image.id}
-                                    className='w-10 h-10 rounded-full object-cover inline'
-                                    src={image.path}
-                                    alt="" />
-                            ))}
-                        </div>
-
-                        <div
-                            className='text-gray-600 text-sm font-semibold flex items-center'
-                        >
-                            <BadgeCheck
-                                fill='#F55800'
-                                color='#f5f5f5'
-                                className='w-5 h-5 mr-1' />
-                            <p>Trusted By 100+ Happy Clients</p>
-                        </div>
-
-                    </section>
-
                 </div>
-
-
-                {/* Right Side */}
-                <div
-                    className='bg-gray- w-full lg:w-[60%] mt-20 lg:mt-0 rounded flex justify-center items-center'
-                >
-
-
-                    <img
-                        className='rounded-xl'
-                        src="https://images.pexels.com/photos/1367269/pexels-photo-1367269.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="" />
-                    {/* 
-                    <img
-                        className='rounded-xl'
-                        src="/brock-lesnar.png"
-                        alt="" /> */}
-
-                    {/* Video Here */}
-                </div>
-
+                <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-orange opacity-10 rounded-full"></div>
+                <div className="absolute -top-16 -right-16 w-64 h-64 bg-zinc opacity-10 rounded-full"></div>
             </section>
 
-            {/* Businesses We Worked With */}
-
-            <section
-                className='pt-16'
-            >
-
-                <h2
-                    className='text-2xl lg:text-5xl text-center font-extrabold text-gray-600 lg:mb-0 mb-8'
-                >
-                    Businesses We Worked With
-
-                </h2>
-
-
-                <div
-                    className='grid lg:grid-cols-5 grid-cols-1 gap-y-8 items-center place-items-center'>
-                    {businessesLogos.map((logo) => (
-                        <img
-                            className={`cursor-pointer grayscale w-40`}
-                            key={logo.id}
-                            src={logo.path}
-                            title={logo.name}
-                            alt={logo.name}
-                        />
-                    ))}
-
-                    <p
-                        className='text-2xl lg:text-4xl font-extrabold text-gray-600 '
-                    >& Beyond...</p>
-
-                </div>
-
-
-
-            </section>
 
 
         </div>
+
     )
 }
 
 export default LandingPage
+

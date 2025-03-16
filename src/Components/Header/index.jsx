@@ -27,20 +27,25 @@ function Header() {
       </section>
 
       <div className='hidden lg:flex space-x-4'>
-        <button
-          className='btn-primary hidden lg:block animate-subtle-bounc'
+        <NavLink
+          to={"/pricing"}
         >
-          Claim your free website <MoveRight className='inline w-6 h-6 ml-2' />
+          <button
+            className='btn-primary hidden lg:block animate-subtle-bounc'
+          >
+            Claim your free website <MoveRight className='inline w-6 h-6 ml-2' />
 
-        </button>
+          </button>
 
-        <button
+        </NavLink>
+
+        {/* <button
           className=' btn-outline hidden lg:block animate-subtle-bounc'
         >
           I will pay $ upfront
-          {/* <MoveRight className='inline w-6 h-6 ml-2' /> */}
+          <MoveRight className='inline w-6 h-6 ml-2' />
 
-        </button>
+        </button> */}
       </div>
 
 

@@ -2,11 +2,12 @@ import HighlightedHeading from '@src/Components/HighlightedHeading'
 import React from 'react'
 import { projects } from './projects'
 import { MoveRight } from 'lucide-react'
+import { sendWhatsappMessage } from '@/utils'
 
 function Projects() {
     return (
         <section
-            className='py-8 lg:py-16 border-gray-400 border-b border-dashed'
+            className='py-8 lg:pt-20 px-4 lg:px-28 '
 
         >
 
@@ -34,6 +35,7 @@ function Projects() {
                 {projects?.map((project) => (
 
                     <div
+                        key={project.id}
                         className='text-gray-600'
                     >
                         <img
@@ -58,18 +60,19 @@ function Projects() {
 
             </div>
 
-            {/* Count Me In BUTTON */}
+            {/* I Want To Grow My Business BUTTON */}
 
-                <div
-                    className='flex bg-green-40 justify-center'
+            <div
+                className='text-center'
+            >
+                <button
+                    onClick={() => sendWhatsappMessage({ message: "Hi, I Want To Grow My Business With Your Website Services, Please tell me next steps." })}
+                    className='btn-primary !px-8 !lg:px-16'
                 >
-                    <button
-                        className='btn-primary !px-8 !lg:px-16'
-                    >
-                        I Want To Grow My Business
-                        <MoveRight className='inline w-6 h-6 ml-2' />
-                    </button>
-                </div>
+                    I Want To Grow My Business
+                    <MoveRight className='inline w-6 h-6 ml-2' />
+                </button>
+            </div>
 
 
 

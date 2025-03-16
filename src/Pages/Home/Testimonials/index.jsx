@@ -4,6 +4,7 @@ import TestimonialsCard from './TestimonialsCard';
 import HighlightedHeading from '@src/Components/HighlightedHeading';
 import TestimonialsOptions from './TestimonialsOptions';
 import { MoveRight } from 'lucide-react';
+import { WHATSAPP_URL } from '@/constants';
 
 function Testimonials() {
 
@@ -11,7 +12,7 @@ function Testimonials() {
 
 
   return (
-    <div className="border-dashed border-y border-gray-400 mt-8 py-8 lg:py-16">
+    <div className=" border-gray-400 mt-8 py-8 bg-gray-50 px-4 lg:px-28 lg:py-28">
       <h4 className="text-4xl lg:text-5xl text-center font-extrabold text-gray-600 lg:mb-0 mb-8">
         {/* Responsive Highlighted Heading */}
         <HighlightedHeading className="lg:hidden">Join the Growing</HighlightedHeading>
@@ -58,6 +59,7 @@ function Testimonials() {
       >
         <button
           className='btn-primary !px-16'
+          onClick={() => window.open(WHATSAPP_URL, '_blank')}
         >
           Count Me In
           <MoveRight className='inline w-6 h-6 ml-2' />

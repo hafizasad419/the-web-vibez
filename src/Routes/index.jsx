@@ -4,18 +4,20 @@ import AuthRoutes from "./AuthRoutes"
 import Header from '@src/Components/Header';
 import { useSelector } from 'react-redux';
 import Fallback from '@src/Components/Fallback';
+import Footer from '@src/Components/Footer';
+import { ChatButton } from '@src/Components/ChatButton';
 
 const BaseRoutes = () => {
   const user = useSelector(state => state.user); //check if user  exists 
   // const user = true
   return (
     <>
-      <div className='bg-white min-h-screen'>
+      <div className='bg-white'>
         <div>
           <Header />
         </div>
 
-        <div className='px-4 lg:px-28 bg-green-5 mt-20 lg:mt-24 lg:py-12'>
+        <div className='mt-20 lg:mt-24'>
           <Suspense fallback={<Fallback />}>
             {
               user ?
@@ -25,14 +27,18 @@ const BaseRoutes = () => {
                 :
                 <>
                   <AuthRoutes />
+                  <ChatButton />
+
+
                 </>
 
             }
           </Suspense>
         </div>
-        <div className='px-4 lg:px-8'>
-          Footer
-        </div>
+
+        {/* Footer */}
+        <Footer />
+
       </div>
     </>
   )
